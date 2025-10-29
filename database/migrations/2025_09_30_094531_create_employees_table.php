@@ -20,6 +20,10 @@ return new class extends Migration
             $table->text('alamat');
             $table->date('tanggal_masuk');
             $table->enum('status', ['aktif', 'nonaktif'])->default  ('aktif'); 
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 2e1de29
             $table->timestamps();
         }); 
     }
