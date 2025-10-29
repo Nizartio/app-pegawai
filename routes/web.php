@@ -2,21 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\PositionController;
+use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\SalaryController;
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/about', function() {
-    return view('about', ['nama' => 'Nizartio Candra Adinata']);
-});
-
-Route::get('/blog', function() {
-    return view('blog');
-});
-
-Route::get('/contact', function() {
-    return view('contact');
-});
+Route::redirect('/', '/employees');
 
 Route::resource('employees', EmployeeController::class);
+Route::resource('departments', DepartmentController::class);
+Route::resource('positions', PositionController::class);
+Route::resource('attendance', AttendanceController::class);
+Route::resource('salary', SalaryController::class);

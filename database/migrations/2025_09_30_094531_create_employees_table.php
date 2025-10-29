@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->date('tanggal_masuk');
             $table->enum('status', ['aktif', 'nonaktif'])->default  ('aktif'); 
+            
             $table->timestamps();
         }); 
     }
